@@ -14,31 +14,7 @@ function App() {
   const { darkMode } = useContext(DarkModeContext);
   return (
     <div className={darkMode ? "app dark" : "app"}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="users">
-              <Route index element={<List />} />
-              <Route path=":userId" element={<Single />} />
-              <Route
-                path="new"
-                element={<New inputs={userInputs} title="Add new User"></New>}
-              ></Route>
-            </Route>
-            <Route path="products">
-              <Route index element={<ListProduct />} />
-              <Route path=":productId" element={<SingleProduct />} />
-              <Route
-                path="new"
-                element={
-                  <New inputs={productInputs} title="Add new Product"></New>
-                }
-              />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      Cao svima ja sam mali Pera
     </div>
   );
 }
