@@ -1,7 +1,7 @@
 {
-  "name": "react-vezba",
-  "version": "0.1.0",
   "homepage": "https://PetarZerajic.github.io/Admin-Dashboard",
+  "name": "admin-dashboard",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "-": "^0.0.1",
