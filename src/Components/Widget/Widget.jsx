@@ -7,9 +7,9 @@ import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalance
 
 export const Widget = ({ type }) => {
   let data;
-  // Trenutno
-  const diff = 20;
-  const amount = 100;
+
+  const diff = Math.floor(Math.random() * 100) + 1;
+  const amount = Math.floor(Math.random() * 100) + 20;
   switch (type) {
     case "user":
       data = {

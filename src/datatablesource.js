@@ -69,7 +69,7 @@ export const productColumns = [
     renderCell: (params) => {
       return (
         <div className="cellWithImg">
-          <img className="cellImg" src={params.row.img} alt="avatar"></img>
+          <img className="cellImg" src={params.row.img} alt="avatar" />
           {params.row.productsname}
         </div>
       );
@@ -139,7 +139,6 @@ export const productColumns = [
   },
 ];
 
-//Trenutno
 export const userRows = [
   {
     id: 1,

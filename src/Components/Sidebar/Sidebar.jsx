@@ -12,78 +12,22 @@ import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
-import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
-import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../../Context/darkModeContext";
-import { useContext, useState } from "react";
-import { useEffect } from "react";
+import { useContext } from "react";
 
 export const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
-  const [mobile, Setmobile] = useState(false);
-  const [sidebar, Setsidebar] = useState(false);
-
-  console.log(Setsidebar);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 700) {
-        Setmobile(true);
-      } else {
-        Setmobile(false);
-      }
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <div className="Sidebar">
-      {mobile && (
-        <div
-          className={
-            !mobile
-              ? "sidebar-toggle-logo-active"
-              : sidebar
-              ? "sidebar-toggle-logo-active"
-              : "sidebar-toggle-logo-inactive"
-          }
-        >
-          {sidebar ? (
-            <CloseOutlinedIcon
-              className="sidebar-toggle-logo"
-              onClick={() => {
-                Setsidebar(!sidebar);
-              }}
-            />
-          ) : (
-            <MenuOutlinedIcon
-              className="sidebar-toggle-logo"
-              onClick={() => Setsidebar(!sidebar)}
-            />
-          )}
-        </div>
-      )}
+      <div className="top">
+        <span className="logo">Admin</span>
+      </div>
 
-      {!mobile && (
-        <div className="top">
-          <span className="logo">Admin</span>
-        </div>
-      )}
       <hr></hr>
 
-      <div
-        className={
-          !mobile
-            ? "center sidebar-active"
-            : sidebar
-            ? "center sidebar-active"
-            : "center sidebar-inactive"
-        }
-      >
+      <div className="center ">
         <ul>
           <p className="title">MAIN</p>
           <li className=" icon-active">
@@ -148,15 +92,7 @@ export const Sidebar = () => {
         </ul>
       </div>
 
-      <div
-        className={
-          !mobile
-            ? "bottom bottom-active"
-            : sidebar
-            ? "bottom bottom-acitve"
-            : "bottom bottom-inactive"
-        }
-      >
+      <div className="bottom">
         <div
           className="colorOption"
           onClick={() => dispatch({ type: "LIGHT" })}

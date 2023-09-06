@@ -1,7 +1,0 @@
-flex: 1;
--Flex 1 je skracenica za flex-grow : 1;    flex-shrink : 1;    flex-basis : 0;
-Sta je props ? 
- -Property je objekat koji sadrži vrednosti za sve parametre koji su prosleđeni komponenti kroz njen konstruktor.Ukratko porps koristimo kada zelimo da prosledimo neki podatak
-Sta je  React context ?
--React context nam omogucava da prenosimo i koristimo podatke u bilo kojoj komponenti koja nam je potrebna u nasoj React aplikaciji bez upotrebe props-a
-	Drugim recima,React context nam omogucava da lakse delimo podatke (slanje) izmedju nasih komponenti

@@ -1,21 +1,10 @@
 .Sidebar {
   flex: 1;
   min-height: 100vh;
-  background-color: white; /*Belu boju stavljamo zbog dark moda*/
+  background-color: white;
 
-  .sidebar-active {
-    display: block;
-  }
-
-  .sidebar-inactive {
-    display: none;
-  }
-
-  .sidebar-toggle-logo-active {
-    margin-left: 200px;
-  }
   .top {
-    height: 50px; /*Trenutno */
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,18 +16,6 @@
     font-size: 20px;
     font-weight: bold;
     color: #294adf;
-  }
-  .sidebar-toggle {
-    display: flex;
-    justify-content: flex-start;
-  }
-  .sidebar-toggle-logo {
-    top: 0;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    font-size: 35px;
   }
 
   hr {
@@ -72,18 +49,7 @@
     padding-left: 30px;
     background-color: #ece8ff;
   }
-  .icon-active {
-    background-color: #ece8ff;
-    color: var(--color-primary);
-  }
-  .icon-active:before {
-    content: "";
-    width: 5px;
-    height: 3.5%;
-    left: 10px;
-    position: absolute;
-    background-color: #294adf;
-  }
+
   .icon {
     font-size: 18px;
     color: #294adf;
@@ -113,22 +79,5 @@
     &:nth-child(2) {
       background-color: #333;
     }
-  }
-  .bottom-active {
-    display: block;
-  }
-
-  .bottom-inactive {
-    display: none;
-  }
-}
-
-// MEDIA QUERIES FOR TABLET
-@media screen and (max-width: 1024px) {
-  .Sidebar {
-    margin-right: 30px;
-  }
-  .center sidebar-active {
-    background-color: red;
   }
 }
